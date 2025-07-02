@@ -25,6 +25,13 @@ const toggleCharacters = ref<boolean>(false);
       <Textarea v-model:text="text" />
       <Blackboard :text="text" :toggleCharacters="toggleCharacters" />
     </div>
+    <div class="footer">
+      <a
+        href="https://github.com/victormedeiros1/alfabeto-libras"
+        target="_blank"
+        >Link do repositório</a
+      >
+    </div>
   </Container>
 </template>
 
@@ -49,11 +56,30 @@ const toggleCharacters = ref<boolean>(false);
   width: 100%;
   max-width: 1000px;
 }
+.footer {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
 
 @media (max-width: 800px) {
   .header__description {
     font-size: 1rem;
     margin: -1rem 0 1rem 0;
+  }
+
+  .footer {
+    height: 2rem;
   }
 }
 </style>
