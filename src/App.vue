@@ -26,4 +26,9 @@ const text = ref<string>("");
 h1 {
   font-size: 4rem;
 }
+
+.content {
+  width: 100%;
+  max-width: 1000px;
+}
 </style>
