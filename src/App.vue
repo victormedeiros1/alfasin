@@ -1,7 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Container from "@/components/Container/Container.vue";
+</script>
 
 <template>
-  <h1>Hello World</h1>
+  <Container>
+    <h1>ALFASIN</h1>
+  </Container>
 </template>
 
-<style scoped></style>
+<style scoped>
+h1 {
+  font-size: 4rem;
+}
+</style>
