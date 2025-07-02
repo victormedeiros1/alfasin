@@ -3,8 +3,10 @@ import { ref } from "vue";
 import Container from "@/components/Container/Container.vue";
 import Textarea from "@/components/Textarea/Textarea.vue";
 import Blackboard from "@/components/Blackboard/Blackboard.vue";
+import Controls from "@/components/Controls/Controls.vue";
 
 const text = ref<string>("");
+const toggleCharacters = ref<boolean>(false);
 </script>
 
 <template>
@@ -13,13 +15,15 @@ const text = ref<string>("");
       <h1 class="header__title">ALFASIN</h1>
       <p class="header__description">
         Bem-vindo ao Alfasin, um conversor de alfabeto escrito para alfabeto de
-        libras.
+        libras
       </p>
-      <div class="header__controls"></div>
+      <div class="header__controls">
+        <Controls v-model:toggleCharacters="toggleCharacters" />
+      </div>
     </div>
     <div class="content">
       <Textarea v-model:text="text" />
-      <Blackboard :text="text" />
+      <Blackboard :text="text" :toggleCharacters="toggleCharacters" />
     </div>
   </Container>
 </template>
@@ -36,6 +40,9 @@ const text = ref<string>("");
 .header__description {
   font-size: 1.25rem;
   margin: -1rem 0 1rem 0;
+}
+.header__controls {
+  width: 100%;
 }
 .content {
   width: 100%;

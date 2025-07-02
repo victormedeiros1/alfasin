@@ -2,7 +2,7 @@
 import { computed, ref, defineProps } from "vue";
 import { signals } from "@/utils";
 
-const props = defineProps<{ text: string }>();
+const props = defineProps<{ text: string; toggleCharacters: boolean }>();
 const separateSignals = computed(() => {
   return props.text.split("");
 });
@@ -18,11 +18,15 @@ const separateSignals = computed(() => {
           :key="index"
         >
           <span v-if="signal === ' '" class="blackboard__space"></span>
-          <img
-            v-else
-            class="blackboard__signal"
-            :src="`/src/assets/images/${signal}.jpg`"
-          />
+          <div v-else>
+            <img
+              class="blackboard__signal"
+              :src="`/src/assets/images/${signal}.jpg`"
+            />
+            <div v-if="toggleCharacters" class="blackboard__character">
+              {{ signal }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -36,14 +40,21 @@ const separateSignals = computed(() => {
   flex-wrap: wrap;
 }
 .blackboard__signal-wrapper {
+  position: relative;
   display: flex;
   align-items: end;
-  height: 5.625rem;
 }
 .blackboard__signal {
   width: 3rem;
+  margin-bottom: 0.5rem;
 }
 .blackboard__space {
   width: 2rem;
+}
+.blackboard__character {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 </style>
