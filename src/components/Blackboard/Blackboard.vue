@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, defineProps } from "vue";
-import { signals } from "@/utils";
+import { computed, defineProps } from "vue";
 
 const props = defineProps<{ text: string; toggleCharacters: boolean }>();
 const separateSignals = computed(() => {

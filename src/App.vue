@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import Container from "@/components/Container/Container.vue";
-import Textarea from "@/components/Textarea/Textarea.vue";
-import Blackboard from "@/components/Blackboard/Blackboard.vue";
-import Controls from "@/components/Controls/Controls.vue";
+import Container from "./components/Container/Container.vue";
+import Textarea from "./components/Textarea/Textarea.vue";
+import Blackboard from "./components/Blackboard/Blackboard.vue";
+import Controls from "./components/Controls/Controls.vue";
 
 const text = ref<string>("");
 const toggleCharacters = ref<boolean>(false);

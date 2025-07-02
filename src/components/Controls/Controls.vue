@@ -4,7 +4,7 @@ import { ref, defineEmits, nextTick } from "vue";
 const toggleCharacters = ref<boolean>(false);
 
 const emit = defineEmits<{
-  (evento: "update:toggleCharacters", value: string): void;
+  (evento: "update:toggleCharacters", value: boolean): void;
 }>();
 
 const emitToggleCharacters = (): void => {
