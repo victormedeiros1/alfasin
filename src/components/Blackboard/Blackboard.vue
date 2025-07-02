@@ -43,13 +43,18 @@ const separateSignals = computed(() => {
   position: relative;
   display: flex;
   align-items: end;
+  margin-bottom: 1rem;
 }
 .blackboard__space {
   width: 3rem;
 }
+.blackboard__signal {
+  width: 6rem;
+  height: 6rem;
+}
 .blackboard__character {
   position: absolute;
-  bottom: 0;
+  bottom: -0.5rem;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -57,6 +62,7 @@ const separateSignals = computed(() => {
 @media (max-width: 800px) {
   .blackboard__signal {
     width: 3rem;
+    height: 3rem;
   }
 }
 </style>
