@@ -1,6 +1,6 @@
 # Alfasin
 
-Bem-vindo ao Alfasin, um conversor de alfabeto escrito Libras, feito como projeto final da disciplina de Libras.
+Bem-vindo ao Alfasin, um conversor de alfabeto escrito para o alfabeto de Libras, feito como projeto final da disciplina de Libras.
 
 ---
 
