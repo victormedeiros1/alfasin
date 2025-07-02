@@ -9,7 +9,8 @@
   width: 100%;
   min-height: 100dvh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem 1.25rem;
 }
 </style>
