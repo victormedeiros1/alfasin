@@ -1,5 +1,10 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import Container from "@/components/Container/Container.vue";
+import Textarea from "@/components/Textarea/Textarea.vue";
+import Blackboard from "@/components/Blackboard/Blackboard.vue";
+
+const text = ref<string>("");
 </script>
 
 <template>
@@ -11,9 +16,8 @@ import Container from "@/components/Container/Container.vue";
       <div class="header__controls"></div>
     </div>
     <div class="content">
-      <div class="request">
-        <textarea name="text" id="text"></textarea>
-      </div>
+      <Textarea v-model:text="text" />
+      <Blackboard :text="text" />
     </div>
   </Container>
 </template>
@@ -21,15 +25,5 @@ import Container from "@/components/Container/Container.vue";
 <style scoped>
 h1 {
   font-size: 4rem;
-}
-
-textarea {
-  width: 600px;
-  height: 200px;
-  resize: none;
-  font-size: 1rem;
-  font-weight: 400;
-  border-radius: 0.25rem;
-  padding: 1rem;
 }
 </style>
