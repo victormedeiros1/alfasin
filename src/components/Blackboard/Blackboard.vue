@@ -17,7 +17,9 @@ const separateSignals = computed(() => {
           v-for="(signal, index) in separateSignals"
           :key="index"
         >
+          <span v-if="signal === ' '" class="blackboard__space"></span>
           <img
+            v-else
             class="blackboard__signal"
             :src="`/src/assets/images/${signal}.jpg`"
           />
