@@ -14,8 +14,7 @@ const toggleCharacters = ref<boolean>(false);
     <div class="header">
       <h1 class="header__title">ALFASIN</h1>
       <p class="header__description">
-        Bem-vindo ao Alfasin, um conversor de alfabeto escrito para alfabeto de
-        libras
+        Bem-vindo ao Alfasin, um conversor de alfabeto escrito para Libras
       </p>
       <div class="header__controls">
         <Controls v-model:toggleCharacters="toggleCharacters" />
