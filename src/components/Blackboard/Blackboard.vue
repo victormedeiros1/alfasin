@@ -44,12 +44,8 @@ const separateSignals = computed(() => {
   display: flex;
   align-items: end;
 }
-.blackboard__signal {
-  width: 3rem;
-  margin-bottom: 0.5rem;
-}
 .blackboard__space {
-  width: 2rem;
+  width: 3rem;
 }
 .blackboard__character {
   position: absolute;

@@ -57,6 +57,7 @@ const filterText = () => {
 
 <template>
   <div class="textearea">
+    <label>Digite o texto no campo abaixo:</label>
     <textarea
       v-model="text"
       name="text"
@@ -75,5 +76,10 @@ textarea {
   font-weight: 400;
   border-radius: 0.25rem;
   padding: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
 }
 </style>
