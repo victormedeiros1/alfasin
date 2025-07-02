@@ -20,7 +20,7 @@ const separateSignals = computed(() => {
           <div v-else>
             <img
               class="blackboard__signal"
-              :src="`/src/assets/images/${signal}.jpg`"
+              :src="`src/assets/images/${signal}.jpg`"
             />
             <div v-if="toggleCharacters" class="blackboard__character">
               {{ signal }}
