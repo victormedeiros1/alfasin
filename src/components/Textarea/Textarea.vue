@@ -82,4 +82,10 @@ label {
   display: block;
   margin-bottom: 0.5rem;
 }
+
+@media (max-width: 800px) {
+  textarea {
+    height: 100px;
+  }
+}
 </style>

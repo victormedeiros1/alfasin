@@ -39,6 +39,7 @@ const toggleCharacters = ref<boolean>(false);
 }
 .header__description {
   font-size: 1.25rem;
+  text-align: center;
   margin: -1rem 0 1rem 0;
 }
 .header__controls {
@@ -47,5 +48,12 @@ const toggleCharacters = ref<boolean>(false);
 .content {
   width: 100%;
   max-width: 1000px;
+}
+
+@media (max-width: 800px) {
+  .header__description {
+    font-size: 1rem;
+    margin: -1rem 0 1rem 0;
+  }
 }
 </style>

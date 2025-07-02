@@ -53,4 +53,10 @@ const separateSignals = computed(() => {
   left: 50%;
   transform: translateX(-50%);
 }
+
+@media (max-width: 800px) {
+  .blackboard__signal {
+    width: 3rem;
+  }
+}
 </style>
