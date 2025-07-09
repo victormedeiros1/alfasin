@@ -1,13 +1,7 @@
 <script setup lang="ts">
-import { ref, defineEmits, nextTick } from "vue";
+import { ref, defineEmits } from "vue";
 
-const props = defineProps<{
-  toggleModal: (showModal: boolean) => void;
-}>();
-
-const emit = defineEmits<{
-  (evento: "update:showModal", value: boolean): void;
-}>();
+const props = defineProps<{ toggleModal: () => void }>();
 </script>
 <template>
   <div class="modal">
@@ -18,6 +12,7 @@ const emit = defineEmits<{
     />
   </div>
 </template>
+p
 <style scoped>
 .modal {
   position: fixed;

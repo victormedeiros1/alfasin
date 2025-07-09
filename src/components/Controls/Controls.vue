@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { ref, defineEmits, defineProps, nextTick } from "vue";
 
-const props = defineProps<{
-  toggleModal: (showModal: boolean) => void;
-}>();
+const props = defineProps<{ toggleModal: () => void }>();
 
 const toggleCharacters = ref<boolean>(false);
 
