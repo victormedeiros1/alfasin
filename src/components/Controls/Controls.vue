@@ -31,7 +31,7 @@ const emitToggleCharacters = (): void => {
       <label for="toggle">Exibir letras</label>
     </div>
     <div class="controls__qrcode">
-      <button class="controls__compartilhar" @click="props.toggleModal">
+      <button class="controls__compartilhar" @click="props.toggleModal()">
         QRCode
       </button>
     </div>

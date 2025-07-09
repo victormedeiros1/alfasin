@@ -12,7 +12,7 @@ const emit = defineEmits<{
 <template>
   <div class="modal">
     <img
-      @click="props.toggleModal"
+      @click="props.toggleModal()"
       class="modal__image"
       src="/images/qrcode.png"
     />
