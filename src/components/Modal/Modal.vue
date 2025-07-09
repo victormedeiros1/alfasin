@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref, defineEmits } from "vue";
-
 const props = defineProps<{ toggleModal: () => void }>();
 </script>
 <template>
