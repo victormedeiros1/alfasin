@@ -4,20 +4,30 @@ import Container from "./components/Container/Container.vue";
 import Textarea from "./components/Textarea/Textarea.vue";
 import Blackboard from "./components/Blackboard/Blackboard.vue";
 import Controls from "./components/Controls/Controls.vue";
+import Modal from "./components/Modal/Modal.vue";
 
 const text = ref<string>("");
 const toggleCharacters = ref<boolean>(false);
+const showModal = ref<boolean>(false);
+
+const toggleModal = () => {
+  showModal.value = !showModal.value;
+};
 </script>
 
 <template>
   <Container>
+    <Modal v-if="showModal" :toggleModal="toggleModal" />
     <div class="header">
       <h1 class="header__title">ALFASIN</h1>
       <p class="header__description">
         Bem-vindo ao Alfasin, um conversor de alfabeto escrito para Libras
       </p>
       <div class="header__controls">
-        <Controls v-model:toggleCharacters="toggleCharacters" />
+        <Controls
+          v-model:toggleCharacters="toggleCharacters"
+          :toggleModal="toggleModal"
+        />
       </div>
     </div>
     <div class="content">

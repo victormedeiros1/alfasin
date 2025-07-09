@@ -1,10 +1,15 @@
 <script setup lang="ts">
-import { ref, defineEmits, nextTick } from "vue";
+import { ref, defineEmits, defineProps, nextTick } from "vue";
+
+const props = defineProps<{
+  toggleModal: (showModal: boolean) => void;
+}>();
 
 const toggleCharacters = ref<boolean>(false);
 
 const emit = defineEmits<{
   (evento: "update:toggleCharacters", value: boolean): void;
+  (evento: "update:showModal", value: boolean): void;
 }>();
 
 const emitToggleCharacters = (): void => {
@@ -25,11 +30,18 @@ const emitToggleCharacters = (): void => {
       />
       <label for="toggle">Exibir letras</label>
     </div>
+    <div class="controls__qrcode">
+      <button class="controls__compartilhar" @click="props.toggleModal">
+        QRCode
+      </button>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .controls {
+  display: flex;
+  justify-content: space-between;
   background-color: #fff;
   width: 100%;
   border-radius: 100px;
@@ -45,6 +57,15 @@ const emitToggleCharacters = (): void => {
 }
 .controls__toggle:hover {
   cursor: pointer;
+}
+.controls__compartilhar {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+}
+.controls__compartilhar:hover {
+  cursor: pointer;
+  color: #007bff;
 }
 input:hover,
 label:hover {
